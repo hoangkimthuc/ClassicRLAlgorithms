@@ -7,3 +7,4 @@ In this repo, I try to implement classic algorithms presented in David Silver's 
 Lecture 3: Dynamic Programming
 1. Value Iteration for estimating the value function
 You can try the grid world example by running the tryoutVi.py file
+2. Policy Iteration for control problem
