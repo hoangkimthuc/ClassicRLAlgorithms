@@ -89,26 +89,21 @@ print(f"The evironment state space is {env.state_space}\
 
 # Compute the value function by the value iteration algo with 10 updates
 for n in range(501):
-    if n%100 == 0:
-        print(agent.value_iteration(n, 
-                                    reward_func = env.make_reward_func(),
-                                    gamma = 1))
+    if n % 100 == 0:
+        print(agent.value_iteration(n,
+                                    reward_func=env.make_reward_func(),
+                                    gamma=1))
 
 # Try out agent method for collecting an episode
 # and compute average reward and compare with the
 # value iteration algorithm
 
-# Set policy and action probability transition matrices          
-    
-for i in range(Sn -1):
+# Set policy and action probability transition matrices
+
+for i in range(Sn - 1):
     Si_rets = []
     for j in range(1000):
         _, ep_rews = agent.collect_an_episode(env, initial_state='S'+str(i))
         ep_rews_total = sum(ep_rews)
-        Si_rets.append(ep_rews_total)      
+        Si_rets.append(ep_rews_total)
     print(sum(Si_rets)/1000)
-                          
-
-
-
-
